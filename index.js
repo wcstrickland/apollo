@@ -7,7 +7,9 @@ const ejsMate = require('ejs-mate'); //import ejs engine allowing for layouts ra
 const session = require('express-session'); // express session tool
 const helmet = require('helmet'); // security mw package
 const app = express(); // running app
-const path = require('path'); // import path module to get access to file paths
+const path = require('path');
+const { q } = require('./questions')
+app.use(express.static(path.join(__dirname, 'public'))); // serves static assets
 app.set('views', path.join(__dirname, 'views')); // set view path
 app.set('view engine', 'ejs'); // set view engine
 app.engine('ejs', ejsMate); // add engine
@@ -25,7 +27,7 @@ app.use(express.static(path.join(__dirname, 'public'))); // serves static assets
 
 // HOME
 app.get('/', (req, res, next) => {
-    res.render('questionaire');
+    res.render('questionaire', { q });
 });
 
 

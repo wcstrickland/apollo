@@ -1,4 +1,4 @@
-modeule.exports.questionaire = {
+module.exports.q = {
     strength: [
         {
             left: "Strongly disagree",
