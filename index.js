@@ -43,6 +43,7 @@ app.post('/', (req, res, next) => {
     for (cat of cats) {
         results[cat] = req.body[cat].reduce(adder)
     }
+    results["cats"] = cats
     res.locals.results = results
     console.log(results)
     res.render('show2', { results })

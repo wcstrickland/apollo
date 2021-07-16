@@ -8,21 +8,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apollo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
-    <script src="https://d3js.org/d3.v6.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
 </head>
 
 <body class="d-flex flex-column vh-100" style="background-color: rgb(250, 250, 250);">
+
         <main class="container mt-5 pt-5">
             <div class="row">
-                <h1 class="text-center">Apollo</h1>
+                <h1 class="text-center mb-2">Results</h1>
                 <div id="Chart"></div>
             </div>
+            <div class="row row-cols-1 row-cols-md-2 g-4 my-5">
+
+                <% for(let i = 0; i<results["cats"].length-1; i++){ %>
+
+                        <div class="col">
+                            <div class="card">
+                            <div class="card-body">
+                                <div class="card-title d-flex justify-content-around">
+                                    <h5><%= results["cats"][i] %> </h5>
+                                </div>
+                                <div class="card-title d-flex justify-content-around">
+                                    <h5><%= results[results["cats"][i]] %></h5>
+                                </div>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            </div>
+                        </div>
+
+                <% } %>
+
+            </div>
+                        <div class="d-flex justify-content-center mb-3">
+                            <div class="card">
+                            <div class="card-body">
+                                <div class="card-title d-flex justify-content-around">
+                                    <h5><%= results["cats"][results["cats"].length-1] %> </h5>
+                                </div>
+                                <div class="card-title d-flex justify-content-around">
+                                    <h5><%= results[results["cats"][[results["cats"].length-1]]] %></h5>
+                                </div>
+                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                            </div>
+                        </div>
+                
         </main>
+
+
+
             <script src="https://d3js.org/d3.v6.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/billboard.min.js"></script>
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
             <script src="https://cdn.jsdelivr.net/npm/billboard.js/dist/" crossorigin="anonymous"></script>
             <script>
