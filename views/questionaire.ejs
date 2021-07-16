@@ -24,11 +24,11 @@
                                     <div class="my-3">
                                         <div class="card">
                                                 <div class="my-2 mx-4 py-3 d-flex justify-content-center">
-                                                    <label for="customRange3" class="form-label"> <%= q[category][i]["question"] %> </label>
+                                                    <label for="<%- [category] %>" class="form-label"> <%= q[category][i]["question"] %> </label> 
                                                 </div>
                                                 <div class="d-flex justify-content-around mx-5 pt-2 pb-5">
                                                     <div class="me-2"><%= q[category][i]["left"] %></div>
-                                                <input type="range" class="form-range" min="0" max="5" step="0.5" name="" id="customRange3">
+                                                <input type="range" class="form-range" min="0" max="10" step="1" name="<%- [category] %>" id="<%- [category] %>">
                                                     <div class="ms-2"><%= q[category][i]["right"] %></div>
                                         </div>
                                     </div>
