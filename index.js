@@ -40,6 +40,12 @@ app.post('/', (req, res, next) => {
     results = {}
     const adder = (acum, cur) => parseInt(acum) + parseInt(cur);
     let cats = ["strength", "cardio", "mindset", "mentalHealth", "stress", "pain", "nutrition"]
+    results["redBorder"] = "boder-danger"
+    results["blueBorder"] = "border-primary"
+    results["greenBorder"] = "border-success"
+    results["redText"] = "text-danger"
+    results["blueText"] = "text-primary"
+    results["greenText"] = "text-success"
     for (cat of cats) {
         results[cat] = req.body[cat].reduce(adder)
     }

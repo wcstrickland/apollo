@@ -23,13 +23,21 @@
                 <% for(let i = 0; i<results["cats"].length-1; i++){ %>
 
                         <div class="col">
-                            <div class="card">
-                            <div class="card-body">
-                                <div class="card-title d-flex justify-content-around">
-                                    <h5><%= results["cats"][i] %> </h5>
+                            <% if (parseInt(results[results["cats"][i]])<40) { %>
+                            <div class="card border-danger">
+                            <div class="card-body text-danger">
+                            <% }else if(39<parseInt(results[results["cats"][i]])<90) { %>
+                            <div class="card border-primary">
+                            <div class="card-body text-primary">
+                            <% }else{ %> 
+                            <div class="card border-success">
+                            <div class="card-body text-success">
+                            <% } %> 
+                                <div class="card-header d-flex justify-content-center">
+                                    <h3><%= results["cats"][i] %> </h3>
                                 </div>
-                                <div class="card-title d-flex justify-content-around">
-                                    <h5><%= results[results["cats"][i]] %></h5>
+                                <div class="card-title d-flex justify-content-around pt-2">
+                                    <h3><%= results[results["cats"][i]] %></h3>
                                 </div>
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
@@ -40,13 +48,21 @@
 
             </div>
                         <div class="d-flex justify-content-center mb-3">
-                            <div class="card">
-                            <div class="card-body">
-                                <div class="card-title d-flex justify-content-around">
-                                    <h5><%= results["cats"][results["cats"].length-1] %> </h5>
+                            <% if (parseInt(results[results["cats"][results["cats"].length - 1]])<40) { %>
+                            <div class="card border-danger">
+                            <div class="card-body text-danger">
+                            <% }else if(39<parseInt(results[results["cats"][results["cats"].length - 1]])<90) { %>
+                            <div class="card border-primary">
+                            <div class="card-body text-primary">
+                            <% }else{ %> 
+                            <div class="card border-success">
+                            <div class="card-body text-success">
+                            <% } %> 
+                                <div class="card-header d-flex justify-content-around">
+                                    <h3><%= results["cats"][results["cats"].length-1] %> </h3>
                                 </div>
                                 <div class="card-title d-flex justify-content-around">
-                                    <h5><%= results[results["cats"][[results["cats"].length-1]]] %></h5>
+                                    <h3><%= results[results["cats"][[results["cats"].length-1]]] %></h3>
                                 </div>
                                 <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                             </div>
