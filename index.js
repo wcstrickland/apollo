@@ -94,12 +94,12 @@ app.post('/', (req, res, next) => {
 
 
 
-// // ERROR HANDLER
-// app.use((err, req, res, next) => {
-//     const { status = 500 } = err;
-//     if (!err.message) err.message = 'Something went wrong...';
-//     res.status(status).render('error', { err });
-// });
+// ERROR HANDLER
+app.use((err, req, res, next) => {
+    const { status = 500 } = err;
+    if (!err.message) err.message = 'Something went wrong...';
+    res.status(status).render('error', { err });
+});
 
 // LISTENER
 const port = process.env.PORT || 3000;

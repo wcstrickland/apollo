@@ -2,11 +2,6 @@ module.exports.q = {
     Strength: [
         {
             left: "Strongly disagree",
-            question: "I track my macronutrients calories",
-            right: "Strongly agree"
-        },
-        {
-            left: "Strongly disagree",
             question: "I would have no problem carrying my family from a burning building",
             right: "Strongly agree"
         },
@@ -43,9 +38,9 @@ module.exports.q = {
             right: "That sounds easy!"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I get out of breath going upstairs",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
             left: "Strongly disagree",
@@ -63,9 +58,9 @@ module.exports.q = {
             right: "Strongly agree"
         },
         {
-            left: "Strongly disagree",
+            left: "2 packs a day",
             question: "I smoke (cigarettes)",
-            right: "Strongly agree"
+            right: "Never"
         }
     ],
     Nutrition: [
@@ -90,19 +85,19 @@ module.exports.q = {
             right: "Strongly agree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "There are no bad foods",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I often find myself binging on snack foods",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I drink alcohol frequently",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
             left: "Strongly disagree",
@@ -117,14 +112,14 @@ module.exports.q = {
             right: "Strongly agree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I often hit obstacles that make me want to give up",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I'm in my current situation due to events out of my control",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
             left: "Strongly disagree",
@@ -132,14 +127,14 @@ module.exports.q = {
             right: "Strongly agree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I often feel like a failure",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I wish I could have more respect for myself",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
             left: "Strongly disagree",
@@ -169,9 +164,9 @@ module.exports.q = {
             right: "Strongly agree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I often feel anxious or worried",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
             left: "Strongly disagree",
@@ -179,34 +174,34 @@ module.exports.q = {
             right: "Strongly agree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I often feel sad, unmotivated, or even suicidal",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I often have an impending sense of doom, as if something bad will happen to me or my loved ones",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I struggle to find things than are fun or find pleasure in things that used to make me happy",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I have very little energy or feel tired all the time",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I have trouble concentrating frequently, like I have brain fog",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I find myself detached or numb at times",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
             left: "Strongly disagree",
@@ -216,34 +211,34 @@ module.exports.q = {
     ],
     Pain: [
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I have persistent pain during my daily activities",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I struggle to decrease pain despite trying a lot of different treatments",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I have pain that prevents me from progressing or exercising",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "Pain prevents me from enjoying activities with my family and friends",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I have a bad back, hip, shoulder, elbow, knee, or ankle (or something else)",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I am currently injured'",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         }
     ],
     Stress: [
@@ -258,9 +253,9 @@ module.exports.q = {
             right: "Strongly agree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I tend to place others needs above my own",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
             left: "Strongly agree",
@@ -268,19 +263,19 @@ module.exports.q = {
             right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I tend to bring work home with me (mentally or literally)",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I find myself being irritable with my family and friends",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
-            left: "Strongly disagree",
+            left: "Strongly agree",
             question: "I feel like life is piling up on me",
-            right: "Strongly agree"
+            right: "Strongly disagree"
         },
         {
             left: "Strongly disagree",
