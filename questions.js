@@ -1,5 +1,5 @@
 module.exports.q = {
-    strength: [
+    Strength: [
         {
             left: "Strongly disagree",
             question: "I track my macronutrients calories",
@@ -36,7 +36,7 @@ module.exports.q = {
             right: "That sounds easy!"
         }
     ],
-    cardio: [
+    Cardio: [
         {
             left: "That sounds really hard",
             question: "I can run one mile in under 8 minutes",
@@ -68,7 +68,7 @@ module.exports.q = {
             right: "Strongly agree"
         }
     ],
-    nutrition: [
+    Nutrition: [
         {
             left: "Strongly disagree",
             question: "I am in total control of my diet",
@@ -110,7 +110,7 @@ module.exports.q = {
             right: "Strongly agree"
         }
     ],
-    mindset: [
+    Mindset: [
         {
             left: "Strongly disagree",
             question: "I feel that I am in control of my life",
@@ -162,7 +162,7 @@ module.exports.q = {
             right: "Strongly agree"
         }
     ],
-    mentalHealth: [
+    MentalHealth: [
         {
             left: "Strongly disagree",
             question: "I am totally happy with my life",
@@ -214,7 +214,7 @@ module.exports.q = {
             right: "Strongly agree"
         }
     ],
-    pain: [
+    Pain: [
         {
             left: "Strongly disagree",
             question: "I have persistent pain during my daily activities",
@@ -246,7 +246,7 @@ module.exports.q = {
             right: "Strongly agree"
         }
     ],
-    stress: [
+    Stress: [
         {
             left: "Strongly disagree",
             question: "I have a good work/life balance",
