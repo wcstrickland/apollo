@@ -14,7 +14,7 @@ const { tips } = require('./tips')
 const { request } = require('http');
 const jshare = require('jshare')
 const { bb, radar } = require('billboard.js')
-app.use(express.static(path.join(__dirname, 'public'))); // serves static assets
+app.use('/static', express.static(path.join(__dirname, 'public'))); // serves static assets
 app.set('views', path.join(__dirname, 'views')); // set view path
 app.set('view engine', 'ejs'); // set view engine
 app.engine('ejs', ejsMate); // add engine
