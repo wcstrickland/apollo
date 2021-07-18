@@ -59,6 +59,10 @@ app.post('/questionaire', (req, res, next) => {
     res.render('show', { results })
 })
 
+app.all('*', (req, res, next) => {
+    res.render('error');
+})
+
 
 
 // ERROR HANDLER
