@@ -12,9 +12,9 @@
 <body class="d-flex flex-column vh-100" style="background-color: rgb(250, 250, 250);">
         <main class="container mt-5 pt-5">
             <div class="row">
-                <h1 class="text-center">Apollo</h1>
-                <div class="col-8 offset-2 mb-5">
-                    <form action="/" method="POST" novalidate class="validated-form" novalidate>
+                <h1 class="text-center mb-3">Be honest with yourself.</h1>
+                <div class=" col-md-8 offset-md-2 col-sm-10 offset-sm-1 col-12  mb-5">
+                    <form action="/questionaire" method="POST" novalidate class="validated-form" novalidate>
                         <% for( let i = 0; i < Math.max(q.Strength.length, q.Cardio.length, q.Nutrition.length, q.Mindset.length, q.MentalHealth.length, q.Pain.length, q.Stress.length); i++ ) { %>
 
                             <% for(const category in q) { %>
