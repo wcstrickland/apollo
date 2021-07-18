@@ -6,34 +6,34 @@ module.exports.q = {
             right: "Strongly agree"
         },
         {
-            left: "I have trouble standing up",
+            left: "That sounds hard.",
             question: "I can squat 1.75 times my bodyweight",
             right: "That sounds easy!"
         },
         {
-            left: "That sounds really hard",
+            left: "That sounds hard",
             question: "I can bench press 1.25 times my bodyweight (or overhead press 0.75xBW)",
             right: "That sounds easy!"
         },
         {
-            left: "That sounds really hard",
+            left: "That sounds hard",
             question: "I can perform 20 push-ups in a row",
             right: "That sounds easy!"
         },
         {
-            left: "That sounds really hard",
+            left: "That sounds hard",
             question: "I can perform a 1 minute ab plank",
             right: "That sounds easy!"
         },
         {
-            left: "That sounds really hard",
+            left: "That sounds hard",
             question: "I can perform 5 strict pull-ups in a row",
             right: "That sounds easy!"
         }
     ],
     Cardio: [
         {
-            left: "That sounds really hard",
+            left: "That sounds hard",
             question: "I can run one mile in under 8 minutes",
             right: "That sounds easy!"
         },

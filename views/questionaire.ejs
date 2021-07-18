@@ -23,13 +23,14 @@
 
                                     <div class="my-3">
                                         <div class="card">
-                                                <div class="my-2 mx-4 py-3 d-flex justify-content-center">
+                                                <div class="my-2 mx-2 py-2 d-flex justify-content-center">
                                                     <label for="<%- [category] %>" class="form-label"> <%= q[category][i]["question"] %> </label> 
                                                 </div>
-                                                <div class="d-flex justify-content-around mx-5 pt-2 pb-5">
-                                                    <div class="me-2"><%= q[category][i]["left"] %></div>
-                                                <input type="range" class="form-range" min="0" max="10" step="1" name="<%- [category] %>" id="<%- [category] %>">
-                                                    <div class="ms-2"><%= q[category][i]["right"] %></div>
+                                                <div class="d-flex justify-content-around mx-1 pt-2 pb-5">
+                                                    <div ><%= q[category][i]["left"] %></div>
+                                                <input type="range" class="form-range " min="0" max="10" step="1" name="<%- [category] %>" id="<%- [category] %>">
+                                                    <div ><%= q[category][i]["right"] %></div>
+                                                </div>
                                         </div>
                                     </div>
                                  
