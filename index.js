@@ -14,6 +14,7 @@ const { tips } = require('./tips')
 const { request } = require('http');
 const jshare = require('jshare')
 const { bb, radar } = require('billboard.js')
+const nodemailer = require('nodemailer');
 app.use('/static', express.static(path.join(__dirname, 'public'))); // serves static assets
 app.set('views', path.join(__dirname, 'views')); // set view path
 app.set('view engine', 'ejs'); // set view engine
@@ -26,6 +27,19 @@ app.use(methodOverride('_method')); // middle ware that allows put request to be
 app.use(morgan('tiny')); // logging mw: console.logs request, route, response time
 app.use(jshare())
 app.use(express.static(path.join(__dirname, 'public'))); // serves static assets
+
+
+
+// *************** E-mail ***************
+
+const transporter = nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+        user: '',
+        pass: ''
+    }
+});
+
 
 
 //************ ROUTES *******************
@@ -44,18 +58,29 @@ app.post('/questionaire', (req, res, next) => {
     results = {}
     const adder = (acum, cur) => parseInt(acum) + parseInt(cur);
     let cats = ["Strength", "Cardio", "Pain", "MentalHealth", "Stress", "Mindset", "Nutrition"]
-    results["redBorder"] = "boder-danger"
-    results["blueBorder"] = "border-primary"
-    results["greenBorder"] = "border-success"
-    results["redText"] = "text-danger"
-    results["blueText"] = "text-primary"
-    results["greenText"] = "text-success"
     for (cat of cats) {
         results[cat] = req.body[cat].reduce(adder)
     }
     results["cats"] = cats
     results["tips"] = tips
     res.locals.results = results
+    let mailOptions = {
+        from: '',
+        to: '',
+        subject: '',
+        text: `{req.body.email} : Strength:{results["Strength"]}`
+    }
+    console.log(`${req.body.email} : 
+    Strength:${results["Strength"]}
+    Cardio: ${results["Cardio"]}
+    Pain: ${results["Pain"]}
+    MentalHealth: ${results["MentalHealth"]}
+    Stress: ${results["Stress"]}
+    Mindset: ${results["Mindset"]}
+    Nutrition: ${results["Nutrition"]}
+    `)
+    // console.log(req.body)
+    // console.log(results)
     res.render('show', { results })
 })
 
