@@ -1,5 +1,5 @@
 // ************** REQUIREMENTS AND INTITIALIZATION *************
-
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override'); // import method override to allow put and other requests from body
@@ -35,8 +35,8 @@ app.use(express.static(path.join(__dirname, 'public'))); // serves static assets
 const transporter = nodemailer.createTransport({
     service: 'gmail',
     auth: {
-        user: '',
-        pass: ''
+        user: process.env.GMAIL_ACCOUNT,
+        pass: process.env.GMAIL_PASSWORD
     }
 });
 
@@ -64,13 +64,7 @@ app.post('/questionaire', (req, res, next) => {
     results["cats"] = cats
     results["tips"] = tips
     res.locals.results = results
-    let mailOptions = {
-        from: '',
-        to: '',
-        subject: '',
-        text: `{req.body.email} : Strength:{results["Strength"]}`
-    }
-    console.log(`${req.body.email} : 
+    let message = `${req.body.email} : 
     Strength:${results["Strength"]}
     Cardio: ${results["Cardio"]}
     Pain: ${results["Pain"]}
@@ -78,10 +72,23 @@ app.post('/questionaire', (req, res, next) => {
     Stress: ${results["Stress"]}
     Mindset: ${results["Mindset"]}
     Nutrition: ${results["Nutrition"]}
-    `)
+    `
+    let mailOptions = {
+        from: process.env.GMAIL_ACCOUNT,
+        to: process.env.GMAIL_ACCOUNT,
+        subject: 'Apollo Protocol',
+        text: message
+    }
     // console.log(req.body)
     // console.log(results)
     res.render('show', { results })
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log("email sent")
+        }
+    })
 })
 
 app.all('*', (req, res, next) => {
