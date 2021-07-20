@@ -73,6 +73,7 @@ app.post('/questionaire', (req, res, next) => {
     Mindset: ${results["Mindset"]}
     Nutrition: ${results["Nutrition"]}
     `
+
     let mailOptions = {
         from: process.env.GMAIL_ACCOUNT,
         to: process.env.GMAIL_ACCOUNT,
@@ -88,7 +89,18 @@ app.post('/questionaire', (req, res, next) => {
         } else {
             console.log("email sent")
         }
-    })
+    });
+
+    mailOptions.to = req.body.email
+    mailOptions.text = "We're glad you have showed interest in improving. We recieved your apollo protocol scores and hope you would like to start putting this information to use today. "
+
+    transporter.sendMail(mailOptions, (error, info) => {
+        if (error) {
+            console.log(error);
+        } else {
+            console.log("email sent")
+        }
+    });
 })
 
 app.all('*', (req, res, next) => {
