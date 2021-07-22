@@ -59,29 +59,27 @@ app.post('/questionaire', (req, res, next) => {
     const adder = (acum, cur) => parseInt(acum) + parseInt(cur);
     let cats = ["Strength", "Cardio", "Pain", "MentalHealth", "Stress", "Mindset", "Nutrition"]
     for (cat of cats) {
-        results[cat] = req.body[cat].reduce(adder)
+        results[cat] = Math.floor(10 * (req.body[cat].reduce(adder) / req.body[cat].length))
     }
     results["cats"] = cats
     results["tips"] = tips
     res.locals.results = results
     let message = `${req.body.email} : 
-    Strength:${results["Strength"]}
-    Cardio: ${results["Cardio"]}
-    Pain: ${results["Pain"]}
-    MentalHealth: ${results["MentalHealth"]}
-    Stress: ${results["Stress"]}
-    Mindset: ${results["Mindset"]}
-    Nutrition: ${results["Nutrition"]}
+    Strength:${results["Strength"]} %
+    Cardio: ${results["Cardio"]} %
+    Pain: ${results["Pain"]} %
+    MentalHealth: ${results["MentalHealth"]} %
+    Stress: ${results["Stress"]} %
+    Mindset: ${results["Mindset"]} %
+    Nutrition: ${results["Nutrition"]} %
     `
 
     let mailOptions = {
         from: process.env.GMAIL_ACCOUNT,
         to: process.env.GMAIL_ACCOUNT,
-        subject: 'Apollo Protocol',
+        subject: `Apollo Protocol results for ${req.body.email}`,
         text: message
     }
-    // console.log(req.body)
-    // console.log(results)
     res.render('show', { results })
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {
