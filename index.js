@@ -10,7 +10,7 @@ const helmet = require('helmet'); // security mw package
 const app = express(); // running app
 const path = require('path');
 const { q } = require('./questions');
-const { tips } = require('./tips')
+const { tips, autoEmail } = require('./tips')
 const { request } = require('http');
 const jshare = require('jshare')
 const { bb, radar } = require('billboard.js')
@@ -90,7 +90,8 @@ app.post('/questionaire', (req, res, next) => {
     });
 
     mailOptions.to = req.body.email
-    mailOptions.text = "We're glad you have showed interest in improving. We recieved your apollo protocol scores and hope you would like to start putting this information to use today. "
+    mailOptions.text = autoEmail
+    mailOptions.subject = "Your Apollo Protocol Results"
 
     transporter.sendMail(mailOptions, (error, info) => {
         if (error) {

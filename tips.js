@@ -35,3 +35,5 @@ module.exports.tips = [
         blue: "Looking to be more than just 'not overweight'? Seeking to push your phsyique to the limit. Let us help."
     }
 ]
+
+module.exports.autoEmail = "We're glad you have showed interest in improving. We recieved your apollo protocol scores and hope you would like to start putting this information to use today. "
